@@ -5,7 +5,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/
 # set up a working directory inside the container
 WORKDIR /app
 
-COPY pipeline.py pipeline.py
+COPY ingest_data.py .
 
 
 ENV PATH="/app/.venv/bin:$PATH"
@@ -17,4 +17,4 @@ COPY "pyproject.toml" "uv.lock" ".python-version" ./
 RUN uv sync --locked
 
 # define what to do first when the container run
-ENTRYPOINT ["python", "pipeline.py"]
+ENTRYPOINT ["python", "ingest_data.py"]
