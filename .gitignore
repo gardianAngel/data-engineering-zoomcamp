@@ -19,3 +19,12 @@ venv/
 
 # ignore google cloud sdk
 google-cloud-sdk/
+*.tar.gz
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.tfvars.json
