@@ -17,3 +17,5 @@ venv/
 # OS files
 .DS_Store
 
+# ignore google cloud sdk
+google-cloud-sdk/
